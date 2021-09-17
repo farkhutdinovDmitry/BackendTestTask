@@ -1,12 +1,10 @@
 package ru.kameleoon.trial.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
-@JsonIgnoreProperties({"hibernateLazyInitializer"})
 @Entity
 @Data
 @Getter

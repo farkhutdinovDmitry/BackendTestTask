@@ -1,7 +1,5 @@
 package ru.kameleoon.trial.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
@@ -9,7 +7,6 @@ import org.hibernate.annotations.OnDeleteAction;
 import javax.persistence.*;
 import java.util.Date;
 
-@JsonIgnoreProperties({"hibernateLazyInitializer"})
 @Entity
 @Data
 @Getter
@@ -27,7 +24,6 @@ public class Vote {
 	@JoinColumn(name = "user_id", referencedColumnName = "id")
 	private User user;
 
-	@JsonIgnore
 	@ManyToOne
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	@JoinColumn(name = "quote_id", nullable = false)
